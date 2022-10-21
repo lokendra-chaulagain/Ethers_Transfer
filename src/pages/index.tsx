@@ -3,9 +3,9 @@ import Web3Modal from "web3modal";
 import { ethers } from "ethers";
 import axios from "axios";
 import { create as ipfsHttpClient } from "ipfs-http-client";
-import { etherTransferContractAddress, etherTransferABI } from "../context/constants.js";
-import MainCard from "../components/MainCard";
-import LatestTransactionTable from "../components/LatestTransactionTable";
+import { etherTransferContractAddress, etherTransferABI } from "../../context/constants.js";
+import MainCard from "../../components/MainCard";
+import LatestTransactionTable from "../../components/LatestTransactionTable";
 
 const Home = () => {
   //connecting our smart contract
@@ -29,9 +29,9 @@ const Home = () => {
   });
 
   return (
-    <div className="" style={{ height: "100vh", backgroundColor: "#7700a6" }}>
+    <div className="app_body  d-flex flex-column align-items-center gap-2 mt-5">
       <MainCard />
-      <LatestTransactionTable/>
+      <LatestTransactionTable />
     </div>
   );
 };

@@ -1,12 +1,10 @@
 import React from "react";
 
-type Props = {};
-
-const LatestTransactionTable = (props: Props) => {
+const LatestTransactionTable = () => {
   return (
-    <div className="container p-3"  style={{backgroundColor:"#0016ee"}}>
-        <h2 className="text-center my-3 mb-5">Latest Transaction History</h2>
-      <table className="table " >
+    <div className=" main_card col-11 p-3 mt-5">
+      <h2 className="text-center my-3 mb-5">Latest Transaction History</h2>
+      <table className="table text_color ">
         <thead>
           <tr>
             <th scope="col">Transaction ID</th>
