@@ -39,12 +39,9 @@ const MainCard = () => {
             setConnectionSuccess(true);
             setConnectionPending(false);
           } else {
-            // setConnectionPending(true);
             console.log("Wallet is not connected please try again once ");
           }
-        } catch (error) {
-          // setConnectionPending(true);
-        }
+        } catch (error) {}
       } else {
         console.log("Please install metamask");
       }
@@ -73,13 +70,13 @@ const MainCard = () => {
 
   return (
     <div className="main_card p-3  rounded-1  col-6">
-      {connectionPending && !connectionSuccess  && connectionPending? (
+      {connectionPending && !connectionSuccess ? (
         <p className="custom_warning_toast alert alert-warning text-center border-0 rounded-1" role="alert">
           Please accept the Metamask connection request from your wallet !!!
         </p>
       ) : null}
       <div className="d-flex justify-content-center mb-4">
-        {connectionSuccess && currentWalletAddress && connectionPending ? (
+        {connectionSuccess && currentWalletAddress && !connectionPending ? (
           <button disabled onClick={connectWallet} className="btn connection_success_button py-2 rounded-pill">
             {currentWalletAddress ? "Connected" : "Connect wallet"}
           </button>
