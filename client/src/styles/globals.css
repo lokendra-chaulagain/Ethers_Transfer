@@ -6,6 +6,7 @@
 .custom_input_bg {
   background-color: #3e4663 !important;
   outline: none !important;
+  color: #b9b9d8 !important;
 }
 .custom_button {
   border: 1px solid #8c5ca4 !important;
@@ -36,4 +37,15 @@
 body {
   background-color: #7700a6 !important;
   overflow-x: hidden;
+}
+
+.custom_warning_toast {
+  color: #303958 !important;
+  font-weight: 500 !important;
+}
+
+.connection_success_button {
+  border: 1px solid #8c5ca4 !important;
+  background-color: #8c5ca4 !important;
+  color: #b9b9d8 !important;
 }
