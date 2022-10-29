@@ -1,13 +1,20 @@
 const hre = require("hardhat");
 
-async function main() {
-  const EtherTransfer = await hre.ethers.getContractFactory("EtherTransfer"); //get  the contract
-  const etherTransfer = await EtherTransfer.deploy(); //make an instance
-  await etherTransfer.deployed(); //deploy the instance
-  console.log(`Deployed contract Address is ${etherTransfer.address}`); //console the contract address
-}
+const main = async () => {
+  const Transactions = await hre.ethers.getContractFactory("Transactions");
+  const transactions = await Transactions.deploy();
+  await transactions.deployed();
+  console.log("Transactions Contract deployed to : ", transactions.address);
+};
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+const runMain = async () => {
+  try {
+    await main();
+    process.exit(0); //success
+  } catch (error) {
+    console.error(error);
+    process.exit(1); //failure
+  }
+};
+
+runMain();

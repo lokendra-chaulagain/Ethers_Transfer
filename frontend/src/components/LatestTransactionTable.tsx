@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TransactionContext } from "../context/Context";
 
 const LatestTransactionTable = () => {
+  const { transactions } = useContext(TransactionContext);
+
+  console.log(transactions);
   return (
     <div className=" main_card col-11 p-3 mt-5">
       <h2 className="text-center my-3 mb-5">Latest Transaction History</h2>
